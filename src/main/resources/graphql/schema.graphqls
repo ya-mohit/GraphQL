@@ -1,0 +1,30 @@
+type Review {
+    id: ID
+    comment: String
+    rating: Int
+    reviewerName: String
+}
+
+type Movie {
+    id: ID
+    name: String
+    director: String
+    releaseYear: Int
+    category: String
+    reviews: [Review]
+}
+
+input ReviewInput {
+    comment: String!
+    rating: Int!
+    reviewerName: String!
+}
+
+type Query {
+    getAllMovies: [Movie]
+    getMoviesByCategory(category: String): [Movie]
+}
+
+type Mutation {
+    addReviewToMovie(name: String!, review: ReviewInput!): Movie
+}
