@@ -2,10 +2,26 @@ package com.mohit.graohql.GraphQL.Repository;
 
 import com.mohit.graohql.GraphQL.Entity.Movie;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface MovieRepo extends JpaRepository<Movie, Integer> {
-    List<Movie> findByCategory(String category);
-    Movie findByName(String name);
+
+    // LazyInitializationException - the classic "Lazy Loading" problem with Hibernate and GraphQL.
+    // So need to write Query with JOIN FETCH to load the reviews along with the movies to avoid this problem.
+
+    @Query("SELECT DISTINCT m FROM Movie m LEFT JOIN FETCH m.reviews")
+    List<Movie> findAll();
+    
+    @Query("SELECT DISTINCT m FROM Movie m LEFT JOIN FETCH m.reviews WHERE m.id = :id")
+    Optional<Movie> findById(@Param("id") Integer id);
+    
+    @Query("SELECT DISTINCT m FROM Movie m LEFT JOIN FETCH m.reviews WHERE m.category = :category")
+    List<Movie> findByCategory(@Param("category") String category);
+    
+    @Query("SELECT DISTINCT m FROM Movie m LEFT JOIN FETCH m.reviews WHERE m.name = :name")
+    Movie findByName(@Param("name") String name);
 }

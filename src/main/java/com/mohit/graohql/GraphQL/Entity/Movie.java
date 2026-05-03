@@ -24,7 +24,9 @@ public class Movie implements Serializable {
     private String category;
     private String director;
     private int releaseYear;
-    
-    @OneToMany(mappedBy = "movie", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+
+    //EAGER Fetch instead of LAZY to avoid LazyInitializationException in GraphQL when fetching movies and their reviews.
+    //This is done to prevent Cacheable and LazyInitializationException problem in GraphQL when fetching movies and their reviews.
+    @OneToMany(mappedBy = "movie", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Review> reviews;
 }
