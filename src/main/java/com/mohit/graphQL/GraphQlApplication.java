@@ -1,7 +1,7 @@
-package com.mohit.graohql.GraphQL;
+package com.mohit.graphQL;
 
-import com.mohit.graohql.GraphQL.Repository.MovieRepo;
-import com.mohit.graohql.GraphQL.Util.SampleMovieData;
+import com.mohit.graphQL.repository.MovieRepo;
+import com.mohit.graphQL.util.SampleMovieData;
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;

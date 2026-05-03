@@ -1,8 +1,8 @@
-package com.mohit.graohql.GraphQL.Controller;
+package com.mohit.graphQL.controller;
 
-import com.mohit.graohql.GraphQL.Entity.Movie;
-import com.mohit.graohql.GraphQL.Entity.Review;
-import com.mohit.graohql.GraphQL.Service.MovieService;
+import com.mohit.graphQL.entity.Movie;
+import com.mohit.graphQL.entity.Review;
+import com.mohit.graphQL.service.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.MutationMapping;

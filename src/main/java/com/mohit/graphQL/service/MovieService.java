@@ -1,7 +1,7 @@
-package com.mohit.graohql.GraphQL.Service;
+package com.mohit.graphQL.service;
 
-import com.mohit.graohql.GraphQL.Entity.Movie;
-import com.mohit.graohql.GraphQL.Repository.MovieRepo;
+import com.mohit.graphQL.entity.Movie;
+import com.mohit.graphQL.repository.MovieRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;

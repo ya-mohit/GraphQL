@@ -1,4 +1,4 @@
-package com.mohit.graohql.GraphQL.Entity;
+package com.mohit.graphQL.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Entity;

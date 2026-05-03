@@ -1,4 +1,4 @@
-package com.mohit.graohql.GraphQL.Config;
+package com.mohit.graphQL.config;
 
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.EnableCaching;

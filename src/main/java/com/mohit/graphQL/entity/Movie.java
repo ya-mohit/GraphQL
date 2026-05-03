@@ -1,4 +1,4 @@
-package com.mohit.graohql.GraphQL.Entity;
+package com.mohit.graphQL.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

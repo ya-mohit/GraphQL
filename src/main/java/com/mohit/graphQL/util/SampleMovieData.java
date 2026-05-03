@@ -1,7 +1,7 @@
-package com.mohit.graohql.GraphQL.Util;
+package com.mohit.graphQL.util;
 
-import com.mohit.graohql.GraphQL.Entity.Movie;
-import com.mohit.graohql.GraphQL.Entity.Review;
+import com.mohit.graphQL.entity.Movie;
+import com.mohit.graphQL.entity.Review;
 
 import java.util.ArrayList;
 import java.util.List;
